@@ -8,7 +8,11 @@
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "app",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "targets": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -62,6 +66,11 @@
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
             "browserTarget": "angular6:build"
+          }
+        },
+        "schematics": {
+          "@schematics/angular:component": {
+            "styleext": "scss"
           }
         },
         "test": {
@@ -123,5 +132,10 @@
       }
     }
   },
-  "defaultProject": "angular6"
+  "defaultProject": "angular6",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
